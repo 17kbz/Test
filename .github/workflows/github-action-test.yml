@@ -9,3 +9,15 @@ jobs:
               run: echo '臭呆子喝水！'
             - name: echo两下
               run: echo "臭呆子偷喝我的水!"
+              name: 测试工作流
+    test-actions-helper:
+      runs-on: ubuntu-latest
+      steps:
+        - id: test
+          uses: 17kbz/actions-helper/test@v1
+          with:
+            input_test: '潘潘测试'
+        - run: echo "$OUTPUT_TEST"
+          shell: bash
+          env:
+            OUTPUT_TEST: ${{steps.test.outputs.output-test}}
