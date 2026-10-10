@@ -15,7 +15,7 @@ jobs:
         - id: test
           uses: 17kbz/actions-helper/test@main
           with:
-            input_test: '潘潘测试1'
+            input-test: '潘潘测试1'
         - run: echo "$OUTPUT_TEST"
           shell: bash
           env:
