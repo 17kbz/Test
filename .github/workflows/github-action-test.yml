@@ -12,8 +12,7 @@ jobs:
     test-actions-helper:
       runs-on: ubuntu-latest
       steps:
-        - id: test
-          uses: 17kbz/actions-helper/test/TestAction
+        - id: test@v1
           with:
             input_test: '潘潘测试'
         - run: echo "$OUTPUT_TEST"
