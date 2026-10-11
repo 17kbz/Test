@@ -13,10 +13,10 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - id: test
-          uses: 17kbz/actions-helper/test@main
-          with:
-            input-test: '潘潘测试1'
-        - run: echo "$OUTPUT_TEST"
-          shell: bash
-          env:
-            OUTPUT_TEST: ${{steps.test.outputs.output-test}}
+          uses: 17kbz/actions-helper/setup-node@main
+          # with:
+          #   input-test: '潘潘测试1'
+        # - run: echo "$OUTPUT_TEST"
+        #   shell: bash
+        #   env:
+        #     OUTPUT_TEST: ${{steps.test.outputs.output-test}}
