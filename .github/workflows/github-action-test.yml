@@ -14,8 +14,8 @@ jobs:
       steps:
         - name: test
           uses: 17kbz/actions-helper/setup-node@main
-          # with:
-          #   node-version: '17'
+          with:
+            node-version: '17'
         # - run: echo "$OUTPUT_TEST"
         #   shell: bash
         #   env:
