@@ -16,7 +16,10 @@ jobs:
           uses: 17kbz/actions-helper/setup-node@main
           with:
             node-version: '18'
-        # - run: echo "$OUTPUT_TEST"
-        #   shell: bash
+        - name: 输出操作系统的版本
+          shell: bash
+          run: cat /ect/os-release
+        - run: echo "$OUTPUT_TEST"
+          shell: bash
         #   env:
         #     OUTPUT_TEST: ${{steps.test.outputs.output-test}}
